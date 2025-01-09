@@ -1,0 +1,662 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  padding: 20px;
+  
+}
+
+.wrapper {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #F5ECD5;
+}
+
+header {
+  background-color: #578E7E;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ddd; 
+}
+
+
+header .logo {
+  display: flex;
+  align-items: center;
+}
+
+header .logo img {
+  height: 50px;
+  margin-right: 10px;
+}
+
+header .logo h1 {
+  margin: 0; 
+  font-size: 24px;
+  color: white;
+  
+}
+
+
+h1 {
+  font-size: 1.5rem;
+  text-align: left;
+  font-family: "DM Serif Text", serif;
+  color: #FFFAEC;
+  font-weight: 300;
+  
+}
+
+.anton-regular {
+  font-family: "Anton", serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+
+.dm-serif-text-regular {
+  font-family: "DM Serif Text", serif;
+  font-weight: 350;
+  font-style: normal;
+}
+
+.dm-serif-text-regular-italic {
+  font-family: "DM Serif Text", serif;
+  font-weight: 350;
+  font-style: italic;
+}
+
+
+/* Reset navigation styling */
+header nav ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li {
+  position: relative;
+  margin: 0 15px;
+}
+
+/* Links in navigation */
+header nav ul li a {
+  text-decoration: none;
+  color: #FFFAEC;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+header nav ul li a:hover {
+  color: #FFD700; /* Gold color */
+  text-shadow: 0 0 5px #FFD700; /* Glow effect */
+}
+
+/* Dropdown Styling */
+nav ul .dropdown {
+  position: relative; /* Ensure dropdown is positioned relative to the parent */
+}
+
+nav ul .dropdown-menu {
+  display: none; /* Hidden by default */
+  position: absolute;
+  top: 100%; /* Positioned below parent link */
+  left: 0;
+  background-color: #578E7E;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul .dropdown-menu li {
+  padding: 10px;
+}
+
+nav ul .dropdown-menu li a {
+  color: #FFFAEC;
+  text-decoration: none;
+  display: block;
+  padding: 5px 15px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul .dropdown-menu li a:hover {
+  background-color: #FFD700;
+  color: #3D3D3D;
+}
+
+/* Show Dropdown Menu on Hover */
+nav ul .dropdown:hover .dropdown-menu {
+  display: block; /* Show dropdown menu when hovering on the parent */
+}
+
+/* Responsive Navigation */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+    align-items: flex-start;
+    background-color: #578E7E;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  nav ul .dropdown-menu {
+    position: static;
+    box-shadow: none;
+  }
+}
+
+
+
+
+
+/* Footer Section */
+footer {
+    background: #3D3D3D ;
+    color: white;
+    text-align: center;
+    padding: 15px 10px;
+     margin-top: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    
+}
+
+footer .social-links a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+
+footer .social-media img {
+    width: 30px;
+}
+
+footer .social-media a {
+    display: inline-block;
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/hero-bg.jpg') no-repeat center center/cover;
+  color: #fff;
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  color: #3D3D3D;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #3D3D3D
+}
+
+.hero-content .cta-btn {
+  background-color: #FFD700;
+  color: #3D3D3D;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.hero-content .cta-btn:hover {
+  background-color: #FFB700;
+}
+
+/* Slideshow Section */
+.slideshow {
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  text-align: center;
+  background-color: #578E7E;
+}
+
+.slideshow h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #F5ECD5;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 750px;
+    height: 400px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+
+    
+}
+
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: auto;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.caption {
+    color: #fff;
+    font-size: 18px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 5px;
+    max-width: 90%;
+    text-align: center;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.5);
+    user-select: none;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+.fade {
+    animation: fadeEffect 1s ease-in-out;
+}
+
+@keyframes fadeEffect {
+    from {opacity: 0.4;}
+    to {opacity: 1;}
+}
+
+@media (max-width: 768px) {
+    .slideshow-container {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+/* Categories Section */
+.categories {
+  padding: 50px 20px;
+  background-color: #EFF3EA;
+  text-align: center;
+  margin-bottom: 0;
+  color: #3D3D3D;
+}
+
+.categories h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.category-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+
+}
+
+.category-card {
+  background-color: #FFFAEC;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.category-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.category-card p {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Call-to-Action Section */
+.call-to-action {
+  background-color: #578E7E;
+  color: #fff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 0;
+}
+
+.call-to-action h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  
+}
+
+.call-to-action p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.call-to-action .cta-btn {
+  background-color: #FFD700;
+  color: #3D3D3D;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.call-to-action .cta-btn:hover {
+  background-color: #FFB700;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    align-items: center;
+}
+
+/* Success Stories Section */
+#success-stories {
+    background-color: #FFF8E1;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#success-stories h2 {
+    text-align: center;
+    color: #3D3D3D;
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.story-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.story {
+    background-color: #FAFAFA;
+    flex: 1 1 calc(33% - 1rem);
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.story:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.story h3 {
+    font-size: 1.5rem;
+    color: #578E7E;
+    margin-bottom: 0.5rem;
+}
+
+.story p {
+    font-size: 1rem;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .story-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .story {
+        flex: 1 1 100%;
+    }
+}
+
+/* Freelance Page Wrapper */
+.freelance-page {
+  padding: 60px;
+  background-color: #FFF;
+}
+
+/* Section Titles */
+.freelance-page h2 {
+  font-size: 2rem;
+  color: #578E7E;
+  margin-bottom: 15px;
+}
+
+/* Freelance Introduction */
+.freelance-intro {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.freelance-intro img {
+  width: 100%; /* Ensure it spans the container */
+  height: auto; /* Maintain aspect ratio */
+  max-width: 800px; /* Add a maximum width to limit the size */
+  display: block; /* Center alignment helper */
+  margin: 0 auto; /* Center the image horizontally */
+  border-radius: 10px; /* Optional: rounded corners for better visuals */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: add some shadow for emphasis */
+  margin-bottom: 20px;
+}
+
+
+
+  
+
+/* Advantages and Disadvantages */
+.freelance-advantages,
+.freelance-disadvantages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.freelance-advantages .card,
+.freelance-disadvantages .card {
+  flex: 1 1 calc(50% - 15px);
+  background-color: #FFF;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.freelance-advantages ul,
+.freelance-disadvantages ul {
+  list-style-type: none;
+}
+
+.freelance-advantages li,
+.freelance-disadvantages li {
+  margin-bottom: 10px;
+}
+
+/* Freelance Categories */
+.freelance-categories {
+  background-color: #f5f5f5;
+  padding: 20px;
+  text-align: center;
+}
+
+.freelance-categories .categories-list {
+  font-size: 1.1rem;
+  color: #1b5e20;
+}
+
+/* Common Section Styling */
+.freelance-page section {
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.freelance-page section h2 {
+  margin-bottom: 15px;
+}
+
+.freelance-page section p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Section Specific Styling */
+.freelance-intro {
+  background-color: #e0f2f1;
+}
+
+.freelance-advantages,
+.freelance-disadvantages {
+  background-color: #f1f8e9;
+}
+
+.freelance-categories {
+  background-color: #e8f5e9;
+}
+
+/* General Section Styling */
+.section-with-bg {
+    background-color: #578E7E;
+    color: #FFFAEC;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-with-bg .highlight {
+    color: #FFD700;
+    font-weight: bold;
+}
+
+.section-with-bg .intro-image {
+    margin-top: 20px;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Mission Section */
+.section-with-icon {
+    padding: 40px;
+    text-align: center;
+    background-color: #FFFAEC;
+    color: #3D3D3D;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.section-with-icon .icon-container {
+    margin-bottom: 20px;
+}
+
+.section-with-icon .mission-icon {
+    width: 80px;
+    height: auto;
+}
+
+.section-with-icon .highlight {
+    color: #578E7E;
+    font-weight: bold;
+}
+
+
+
